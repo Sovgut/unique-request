@@ -5,8 +5,6 @@ http
   .createServer((request, response) => {
     const ip = request.headers["x-forwarded-for"] || request.connection.remoteAddress
     const userAgent = request.headers["user-agent"]
-    console.log(ip, userAgent)
-
     const uniqueKey = Buffer.from(`${ip}-${userAgent}`).toString("base64")
 
     if (uniqueKeys.includes(uniqueKey)) {
