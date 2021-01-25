@@ -8,10 +8,10 @@ http
     const uniqueKey = Buffer.from(`${ip}-${userAgent}`).toString("base64")
 
     if (uniqueKeys.includes(uniqueKey)) {
-      return response.write(`<h3>I know you</h3><p>Your name is: ${uniqueKey}</p>`) && response.end()
+      return response.write(`I know you\nYour name is: ${uniqueKey}`) && response.end()
     }
 
     uniqueKeys.push(uniqueKey)
-    return response.write(`<h3>Hello, are you new?</h3><p>I gave you a new name: ${uniqueKey}</p>`) && response.end()
+    return response.write(`Hello, are you new?\nI gave you a new name: ${uniqueKey}`) && response.end()
   })
   .listen(process.env.PORT || 3030, () => console.log("Server was started"))
