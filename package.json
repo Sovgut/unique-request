@@ -1,15 +1,16 @@
 {
   "name": "unique-request",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "description": "Simple remember user from any request",
+  "main": "main.js",
   "scripts": {
     "start": "node main.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.1"
-  }
+  "author": {
+    "email": "dev.devua@outlook.com",
+    "name": "Sergey Sovgut",
+    "url": "https://github.com/Sovgut"
+  },
+  "license": "MIT"
 }
