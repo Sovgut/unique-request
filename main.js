@@ -2,7 +2,7 @@ const express = require("express")
 
 express()
   .get("/", (request, response) => {
-    const ip = req.headers["x-forwarded-for"] || req.connection.remoteAddress
+    const ip = request.headers["x-forwarded-for"] || request.connection.remoteAddress
     console.log(ip)
 
     response.send(ip)
