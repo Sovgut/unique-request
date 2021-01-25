@@ -6,4 +6,4 @@ express()
 
     response.send(response.ips)
   })
-  .listen(3030, console.log("Server started on 3030"))
+  .listen(process.env.PORT, console.log(`Server started on ${process.env.PORT}`))
